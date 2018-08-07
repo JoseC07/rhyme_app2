@@ -3,30 +3,64 @@
 
 <head>
     <style>
-        #h1 {
-            font: arial;
-            text-align: right;
-        }
+    
+    
+    body {
+        background-color: red;
+    }
+    
+        
+    input[type=text] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: 2px solid black;
+        border-radius: 4px;
+        
+    }
+    input[type=submit]{
+        background-color: white;
+        width: 15%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        
+    }
+    .custom-select {
+    position: relative;
+    font-family: Arial;
+    }
+    
     </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Welcome to Vers!</h1>
+    <h1>
+        <img src="img/vers_logo.png">
+    </h1>
+    
 
     <form method=POST action="/song">
         <input type="text" name="user-noun" placeholder="Enter a Noun">
         <br>
         <input type="text" name="user-verb" placeholder="Enter a Verb">
         <br>
+    <div class="custom-select" style="width:200px;">
         <select required>
             <option name="pick-template" hidden>Pick Template</option>
             <option name="logic">Logic</option>
             <option name="kyle">KYLE</option>
             <option name="chance the rapper">Chance The Rapper</option>
         </select>
+    </div>
         <input type="submit" value = "Go">
         </form>
+<script>
+    
+    
+    
+</script>
 </body>
 
 </html>
+

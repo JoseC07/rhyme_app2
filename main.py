@@ -84,18 +84,27 @@ class GeneratedPage(webapp2.RequestHandler):
             noun7 = nounarray2[2],
             noun8 =  nounarray[3]
             )
-         # x = "hello"
-         # rap = chill_rap.format(
-         #    noun1 = x,
-         #    )
-      
+      elif user_genre == "hype":
+         chill_txt = open("hype.txt")
+         chill_rap = chill_txt.read()
+         chill_txt.close()
+         
+         rap = chill_rap.format(
+            noun1 = user_noun.upper(),
+            noun2 = user_noun2.upper(),
+            noun3 = nounarray2[0],
+            noun4 = nounarray[1],
+            noun5 = nounarray2[1],
+            noun6 = nounarray[2],
+            noun7 = nounarray2[2],
+            noun8 =  nounarray[3]
+            )
+            
       render_dict = {"generated_rap" : rap}
       
       print(rap)
       
-      
       rendered_template = generate_template.render(render_dict)
-      
       self.response.write(rendered_template)
 
 app = webapp2.WSGIApplication([

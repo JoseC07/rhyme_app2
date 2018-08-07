@@ -26,13 +26,10 @@ class GeneratedPage(webapp2.RequestHandler):
         
         self.response.write("Hello World! generate page")
         
-    
-
-
 
 app = webapp2.WSGIApplication([
     ('/', HomePage),
-    ('/generate', GeneratedPage),
+    ('/song', GeneratedPage),
 ], debug=True)
 
 

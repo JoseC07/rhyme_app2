@@ -1,29 +1,32 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <style>
         #h1 {
-           font: arial;
-           text-align: right;
+            font: arial;
+            text-align: right;
         }
     </style>
     <link rel="stylesheet" href="css/style.css">
-    </head>
-   
-    <body>
-        <h1>Welcome to Vers!</h1>
-        <button>Go</button>
-        <form method = POST action="/showmeme">
-    <input type="text" name="user-first-ln" placeholder="First Word">
-    <br>
-    <input type="text" name="user-second-ln" placeholder="Second Word">
-    <br>
-    <select required>
- <option value="pick template"hidden>Pick Template</option>
- <option value="logic">Logic</option>
- <option value="kyle">KYLE</option>
- <option value="chance the rapper">Chance The Rapper</option>
-</select>
-    </body>
+</head>
+
+<body>
+    <h1>Welcome to Vers!</h1>
+
+    <form method=POST action="/showmeme">
+        <input type="text" name="user-noun" placeholder="Enter a Noun">
+        <br>
+        <input type="text" name="user-verb" placeholder="Enter a Verb">
+        <br>
+        <select required>
+            <option name="pick-template" hidden>Pick Template</option>
+            <option name="logic">Logic</option>
+            <option name="kyle">KYLE</option>
+            <option name="chance the rapper">Chance The Rapper</option>
+        </select>
+        <input type="submit" value = "Go">
+        </form>
+</body>
+
 </html>

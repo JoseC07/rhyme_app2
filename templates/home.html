@@ -4,6 +4,7 @@
 <head>
     <style>
     
+
     
     body {
         background-color: lightblue;
@@ -11,6 +12,7 @@
     
     
         
+
     input[type=text] {
         width: 25%;
         padding: 12px 20px;
@@ -44,14 +46,14 @@
     <form method=POST action="/song">
         <input type="text" name="user-noun" placeholder="Enter a Noun">
         <br>
-        <input type="text" name="user-verb" placeholder="Enter a Verb">
+        <input type="text" name="user-noun2" placeholder="Enter a Second Noun">
         <br>
     <div class="custom-select" style="width:200px;">
-        <select required>
-            <option name="pick-template" hidden>Pick Template</option>
-            <option name="logic">Logic</option>
-            <option name="kyle">KYLE</option>
-            <option name="chance the rapper">Chance The Rapper</option>
+        <select required name="user-genre">
+            <option value="pick-template" hidden>Pick Template</option>
+            <option value="chill">chill</option>
+            <option value="kyle">hype</option>
+            <option value="placeholder">placeholder</option>
         </select>
     </div>
         <input type="submit" value = "Go">

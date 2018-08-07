@@ -77,12 +77,12 @@ class GeneratedPage(webapp2.RequestHandler):
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
             noun2 = user_noun2.upper(),
-            noun3 = nounarray2[0],
-            noun4 = nounarray[1],
-            noun5 = nounarray2[1],
-            noun6 = nounarray[2],
-            noun7 = nounarray2[2],
-            noun8 =  nounarray[3]
+            noun3 = nounarray[0],
+            noun4 = nounarray2[1],
+            noun5 = nounarray[1],
+            noun6 = nounarray2[2],
+            noun7 = nounarray[2],
+            noun8 =  nounarray2[3]
             )
       elif user_genre == "hype":
          chill_txt = open("hype.txt")
@@ -92,12 +92,12 @@ class GeneratedPage(webapp2.RequestHandler):
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
             noun2 = user_noun2.upper(),
-            noun3 = nounarray2[0],
-            noun4 = nounarray[1],
-            noun5 = nounarray2[1],
-            noun6 = nounarray[2],
-            noun7 = nounarray2[2],
-            noun8 =  nounarray[3]
+            noun3 = nounarray[0],
+            noun4 = nounarray2[1],
+            noun5 = nounarray[1],
+            noun6 = nounarray2[2],
+            noun7 = nounarray[2],
+            noun8 =  nounarray2[3]
             )
             
       render_dict = {"generated_rap" : rap}

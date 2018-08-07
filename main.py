@@ -14,17 +14,17 @@ the_jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
     
-    
 class HomePage(webapp2.RequestHandler):
     def get(self):
-        self.response.write("Hello World!")
+        about_template = the_jinja_env.get_template('templates/home.html')
+        self.response.write(about_template.render())
    
 
 
 class GeneratedPage(webapp2.RequestHandler):
     def get(self):
         
-        self.response.write("Hello World! generate page")
+        self.response.write("Here's your rap!")
         
 
 app = webapp2.WSGIApplication([

@@ -4,14 +4,13 @@ threadsafe: true
 
 handlers:
 - url: /css
-  static_dir: css
-  
+ static_dir: css
+ 
 - url: /.*
-  script: main.app
-  
+ script: main.app
+ 
 libraries:
 - name: webapp2
-  version: latest
+ version: latest
 - name: jinja2
-  version: latest
-  
+ version: latest

@@ -25,6 +25,7 @@ class GeneratedPage(webapp2.RequestHandler):
        self.response.write("Here's your rap!")
    
    def post(self):
+      
       generate_template = the_jinja_env.get_template('templates/generate.html')
       
       user_noun = self.request.get('user-noun')
@@ -43,7 +44,6 @@ class GeneratedPage(webapp2.RequestHandler):
       
       nounarray = []
       nounarray2 = []
-      
       count = 0
       while len(nounarray) <= 4 and count < 3:
          if len(nounarray2) >= 4:
@@ -76,57 +76,60 @@ class GeneratedPage(webapp2.RequestHandler):
       
       shuffle(nounarray)
       shuffle(nounarray2)
-      
-      if user_genre == "chill":
-         
-         chill_txt = open("chill.txt")
-         chill_rap = chill_txt.read()
-         chill_txt.close()
-         
-         video_id = "QgxFlvzkZNs"
-         
-         rap = chill_rap.format(
-            noun1 = user_noun.upper(),
-            noun2 = user_noun2.upper(),
-            noun3 = nounarray[0],
-            noun4 = nounarray2[1],
-            noun5 = nounarray[1],
-            noun6 = nounarray2[2],
-            noun7 = nounarray[2],
-            noun8 =  nounarray2[3]
-            )
-      elif user_genre == "hype":
-         chill_txt = open("hype.txt")
-         chill_rap = chill_txt.read()
-         chill_txt.close()
-         
-         video_id = "DYZXvWQbC2Y"
-         
-         rap = chill_rap.format(
-            noun1 = user_noun.upper(),
-            noun2 = user_noun2.upper(),
-            noun3 = nounarray[0],
-            noun4 = nounarray2[1],
-            noun5 = nounarray[1],
-            noun6 = nounarray2[2],
-            noun7 = nounarray[2],
-            noun8 =  nounarray2[3]
-            )
-      elif user_genre == "upbeat":
-         chill_txt = open("upbeat.txt")
-         chill_rap = chill_txt.read()
-         chill_txt.close()
-         video_id = "42hmg83QD8M"
-         rap = chill_rap.format(
-            noun1 = user_noun.upper(),
-            noun2 = user_noun2.upper(),
-            noun3 = nounarray[0],
-            noun4 = nounarray2[1],
-            noun5 = nounarray[1],
-            noun6 = nounarray2[2],
-            noun7 = nounarray[2],
-            noun8 =  nounarray2[3]
-            )
+      try:
+         if user_genre == "chill":
+            
+            chill_txt = open("chill.txt")
+            chill_rap = chill_txt.read()
+            chill_txt.close()
+            
+            video_id = "QgxFlvzkZNs"
+            
+            rap = chill_rap.format(
+               noun1 = user_noun.upper(),
+               noun2 = user_noun2.upper(),
+               noun3 = nounarray[0],
+               noun4 = nounarray2[1],
+               noun5 = nounarray[1],
+               noun6 = nounarray2[2],
+               noun7 = nounarray[2],
+               noun8 =  nounarray2[3]
+               )
+         elif user_genre == "hype":
+            chill_txt = open("hype.txt")
+            chill_rap = chill_txt.read()
+            chill_txt.close()
+            
+            video_id = "DYZXvWQbC2Y"
+            
+            rap = chill_rap.format(
+               noun1 = user_noun.upper(),
+               noun2 = user_noun2.upper(),
+               noun3 = nounarray[0],
+               noun4 = nounarray2[1],
+               noun5 = nounarray[1],
+               noun6 = nounarray2[2],
+               noun7 = nounarray[2],
+               noun8 =  nounarray2[3]
+               )
+         elif user_genre == "upbeat":
+            chill_txt = open("upbeat.txt")
+            chill_rap = chill_txt.read()
+            chill_txt.close()
+            video_id = "42hmg83QD8M"
+            rap = chill_rap.format(
+               noun1 = user_noun.upper(),
+               noun2 = user_noun2.upper(),
+               noun3 = nounarray[0],
+               noun4 = nounarray2[1],
+               noun5 = nounarray[1],
+               noun6 = nounarray2[2],
+               noun7 = nounarray[2],
+               noun8 =  nounarray2[3]
+               )
+      except IndexError:
+         rap = "Your word(s) didn't rhyme with enough words. :("
+
       render_dict["generated_rap"] = rap
       render_dict["video_id"] = video_id
       

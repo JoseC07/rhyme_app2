@@ -70,6 +70,9 @@ class GeneratedPage(webapp2.RequestHandler):
          count += 1
       
       rap = ""
+      video_id = ""
+      
+      render_dict = {}
       
       shuffle(nounarray)
       shuffle(nounarray2)
@@ -79,6 +82,8 @@ class GeneratedPage(webapp2.RequestHandler):
          chill_txt = open("chill.txt")
          chill_rap = chill_txt.read()
          chill_txt.close()
+         
+         video_id = "QgxFlvzkZNs"
          
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
@@ -95,6 +100,8 @@ class GeneratedPage(webapp2.RequestHandler):
          chill_rap = chill_txt.read()
          chill_txt.close()
          
+         video_id = "DYZXvWQbC2Y"
+         
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
             noun2 = user_noun2.upper(),
@@ -109,7 +116,7 @@ class GeneratedPage(webapp2.RequestHandler):
          chill_txt = open("upbeat.txt")
          chill_rap = chill_txt.read()
          chill_txt.close()
-         
+         video_id = "42hmg83QD8M"
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
             noun2 = user_noun2.upper(),
@@ -120,7 +127,8 @@ class GeneratedPage(webapp2.RequestHandler):
             noun7 = nounarray[2],
             noun8 =  nounarray2[3]
             )
-      render_dict = {"generated_rap" : rap}
+      render_dict["generated_rap"] = rap
+      render_dict["video_id"] = video_id
       
       print(rap)
       

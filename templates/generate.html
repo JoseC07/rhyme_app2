@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>Here's your rap!</h1>
+    <style>
+    h1 {
+        background-color: white;
+          border: 2px solid black;
+    }
+    h2 {
+         display: block;
+          margin-right: auto;
+          margin-bottom: auto;
+    }
+    body {
+    background-color: lightblue;
+    padding: 0 60px;
+}
+  
+    input[type=submit]{
+        background-color: white;
+        width: 15%;
+        padding: 10px 15px;
+        margin: 8px 0;
+        position: absolute;
+        top: 500px;
+        right: 625px;
+    }
         
-        {{generated_rap}}
+    </style>
+    <body>
+        <h2>Here's your rap!</h2>
+        <form method=POST action="/song">
+        </form>
 
+        </form>
+        <div id ="textbox">
+            <h1>{{generated_rap}}</h1>
+        </div>
+ <input type="submit" value = "Make another">
     </body>
 </html>

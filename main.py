@@ -44,24 +44,30 @@ class GeneratedPage(webapp2.RequestHandler):
       nounarray = []
       nounarray2 = []
       
-      for word in words_array:
-          try:
-              if word["tags"][0] == "n":
-                  nounarray.append(word["word"].upper())
-          except KeyError:
-              pass
-          if len(nounarray2) > 8:
-              break
-           
-      for word in words_array2:
-          try:
-              if word["tags"][0] == "n":
-                  nounarray2.append(word["word"].upper())
-          except KeyError:
-              pass
-          if len(nounarray2) > 8:
-              break
-      print(str(nounarray))
+      count = 0
+      while len(nounarray) < 8 and count < 3:
+         if len(nounarray2) >= 8:
+            break
+         for word in words_array:
+             try:
+                 if word["tags"][0] == "n":
+                     nounarray.append(word["word"].upper())
+             except KeyError:
+                 pass
+         count+=1
+      
+      count = 0
+      while len(nounarray2) < 8 and count < 3: 
+         if len(nounarray2) >= 8:
+                 break
+         for word in words_array2:
+             try:
+                 if word["tags"][0] == "n":
+                     nounarray2.append(word["word"].upper())
+             except KeyError:
+                 pass
+         print(str(nounarray))
+         count += 1
       
       rap = ""
       

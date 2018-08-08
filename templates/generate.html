@@ -2,13 +2,25 @@
 <html>
     <style>
     h1 {
-        background-color: white;
-          border: 2px solid black;
+          border: 3px solid black;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          background-color: rgb(133, 233, 161) ;
     }
     h2 {
          display: block;
-          margin-right: auto;
-          margin-bottom: auto;
+          text-align: center;
+          color: black;
+          font-size: 60px;
+          border: 3px solid black;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          background-color: white ;
+
     }
     body {
     background-color: lightblue;
@@ -21,9 +33,8 @@
         padding: 10px 15px;
         margin: 8px 0;
         position: absolute;
-        top: 500px;
+        top: 600px;
         right: 625px;
-    }
         
     </style>
     <body>
@@ -33,8 +44,10 @@
 
         </form>
         <div id ="textbox">
-            <h1>{{generated_rap | safe}}</h1>
+            <h1>{{generated_rap}}</h1>
         </div>
- <input type="submit" value = "Make another" onclick="window.location.href='/'">
+ <input type="submit" name="redirect" value = "Make another">
     </body>
 </html>
+
+

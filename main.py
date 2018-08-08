@@ -45,8 +45,8 @@ class GeneratedPage(webapp2.RequestHandler):
       nounarray2 = []
       
       count = 0
-      while len(nounarray) < 8 and count < 3:
-         if len(nounarray2) >= 8:
+      while len(nounarray) <= 4 and count < 3:
+         if len(nounarray2) >= 4:
             break
          for word in words_array:
              try:
@@ -57,8 +57,8 @@ class GeneratedPage(webapp2.RequestHandler):
          count+=1
       
       count = 0
-      while len(nounarray2) < 8 and count < 3: 
-         if len(nounarray2) >= 8:
+      while len(nounarray2) <= 4 and count < 3: 
+         if len(nounarray2) >= 4:
                  break
          for word in words_array2:
              try:
@@ -97,7 +97,7 @@ class GeneratedPage(webapp2.RequestHandler):
          
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
-            noun2 = user_noun2.upper(),
+            noun2 = user_noun2.uppergi(),
             noun3 = nounarray[0],
             noun4 = nounarray2[1],
             noun5 = nounarray[1],

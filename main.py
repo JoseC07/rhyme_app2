@@ -97,7 +97,7 @@ class GeneratedPage(webapp2.RequestHandler):
          
          rap = chill_rap.format(
             noun1 = user_noun.upper(),
-            noun2 = user_noun2.uppergi(),
+            noun2 = user_noun2.upper(),
             noun3 = nounarray[0],
             noun4 = nounarray2[1],
             noun5 = nounarray[1],
@@ -105,7 +105,21 @@ class GeneratedPage(webapp2.RequestHandler):
             noun7 = nounarray[2],
             noun8 =  nounarray2[3]
             )
-            
+      elif user_genre == "upbeat":
+         chill_txt = open("upbeat.txt")
+         chill_rap = chill_txt.read()
+         chill_txt.close()
+         
+         rap = chill_rap.format(
+            noun1 = user_noun.upper(),
+            noun2 = user_noun2.upper(),
+            noun3 = nounarray[0],
+            noun4 = nounarray2[1],
+            noun5 = nounarray[1],
+            noun6 = nounarray2[2],
+            noun7 = nounarray[2],
+            noun8 =  nounarray2[3]
+            )
       render_dict = {"generated_rap" : rap}
       
       print(rap)

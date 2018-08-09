@@ -29,28 +29,65 @@
         width: 25%;
         padding: 12px 20px;
         margin: 8px 400px;
-        border: 1px solid black;
+        border: 2px solid black;
         border-radius: 4px;
         text-align: center;
         
     }
     input[type=submit]{
-        position: relative;
-        left: 500px;
-        bottom: 20px;
+        margin:10px;
         background-color: snow;
         width: 20%;
         border: 1px solid black;
         border-radius: 4px;
+        color: green;
         
     }
-    .custom-select {
-        position: relative;
-        left: 400px;
-        font-family: Arial;
+    input[type=submit]:hover{
+        margin:10px;
+        background-color: green;
+        width: 20%;
+        border: 1px solid black;
+        border-radius: 4px;
+        color: white;
     }
     
-    </style>
+    .styled-select {
+       
+        background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+        height: 20px;
+        overflow: hidden;
+        width: 140px;
+    }
+    .styled-select select {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        height: 20px;
+        padding: 5px; 
+        width: 250px;
+}
+    
+    .rounded {
+        
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+    .styled-select:hover {
+       
+        background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+        height: 20px;
+        overflow: hidden;
+        width: 140px;
+        background-color: purple;
+    }
+    .black   { 
+        background-color: white;
+        
+    }
+    .black select   { color: black; }
+    </style> 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -59,21 +96,22 @@
         <img src="img/vers_logo.png">
     </h1>
     
-
+<center> 
     <form method=POST action="/song">
         <input type="text" name="user-noun" placeholder="Enter a Noun">
         <br>
         <input type="text" name="user-noun2" placeholder="Enter a Second Noun">
         <br>
-    <div class="custom-select" style="width:200px;">
+    <div class="styled-select black rounded">
         <select required name="user-genre">
-            <option value="chill">chill</option>
-            <option value="hype">hype</option>
-            <option value="upbeat">upbeat</option>
+            <option value="chill">Chill</option>
+            <option value="hype">Hype</option>
+            <option value="upbeat">Upbeat</option>
         </select>
     </div>
         <input type="submit" value = "Go">
         </form>
+</center>
 <script>
     
     

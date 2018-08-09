@@ -36,15 +36,6 @@
     padding: 0 60px;
 }
   
-    input[type=submit]{
-        background-color: white;
-        width: 15%;
-        padding: 10px 15px;
-        margin: 8px 0;
-        position: absolute;
-        top: 600px;
-        right: 625px;
-        
     </style>
     <body>
         <h2>Here's your rap!</h2>
@@ -52,11 +43,15 @@
         </form>
 
         </form>
+        <center>
         <div id ="textbox">
-            <h1>{{generated_rap | safe}}<br> <iframe width="200" height="100" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></h1>
+            <h1>{{generated_rap | safe}}<br> 
+            <iframe width="200" height="100" src="https://www.youtube.com/embed/{{video_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></h1>
+            <br>
+            <input type="submit" style = "height:200px; width: 200px" onclick="location.href = '/';" name="redirect" value = "Make another">
         </div>
+        </center>
 
- <input type="submit" onclick="location.href = '/';" name="redirect" value = "Make another">
      
     </body>
 </html>

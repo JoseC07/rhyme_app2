@@ -129,6 +129,7 @@ class GeneratedPage(webapp2.RequestHandler):
                )
       except IndexError:
          rap = "Your word(s) didn't rhyme with enough words. :("
+         video_id = ""
 
       render_dict["generated_rap"] = rap
       render_dict["video_id"] = video_id

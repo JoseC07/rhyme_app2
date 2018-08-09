@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <title>Vers</title>
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <style>
     
 
@@ -23,12 +26,9 @@
         
 
     input[type=text] {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         width: 25%;
         padding: 12px 20px;
-        margin: 8px 400px;
+        margin: 8px;
         border: 2px solid black;
         border-radius: 4px;
         text-align: center;
@@ -93,11 +93,11 @@
 
 <body>
     <h1>
-        <img src="img/vers_logo.png">
+        <img class="animated zoomInDown" src="img/vers_logo.png">
     </h1>
     
 <center> 
-    <form method=POST action="/song">
+    <form method=POST action="/song" class="animated fadeIn">
         <input type="text" name="user-noun" placeholder="Enter a Noun">
         <br>
         <input type="text" name="user-noun2" placeholder="Enter a Second Noun">
